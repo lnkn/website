@@ -6,8 +6,10 @@ import {
 } from "react-router-dom";
 import './App.css';
 import Home from './Home';
-import Music from './Music';
+import Work from './Work';
 import Photography from './Photography';
+import Culture from './Culture';
+import Music from './Music';
 import About from './About';
 import {
   CSSTransition,
@@ -23,21 +25,24 @@ class App extends Component {
       <div className="App">
         <div className="nav">
           <NavLink exact to="/" activeClassName="active">Home</NavLink>
-          <NavLink to="/Music" activeClassName="active">Music</NavLink>
+          <NavLink to="/Work" activeClassName="active">Work</NavLink>
           <NavLink to="/Photography" activeClassName="active">Photography</NavLink>
           <NavLink to="/Culture" activeClassName="active">Culture</NavLink>
+          <NavLink to="/Music" activeClassName="active">Music</NavLink>
           <NavLink to="/about" activeClassName="active">About</NavLink>
         </div>
         <Route render={({location}) => (
           <TransitionGroup>
             <CSSTransition
               key={location.key}
-              timeout={450}
+              timeout={1800}
               classNames="fade"
             >
               <Switch location={location}>
                 <Route exact path="/" component={Home} />
                 <Route path="/Photography" component={Photography} />
+                <Route path="/Work" component={Work} />
+                <Route path="/Culture" component={Culture} />
                 <Route path="/Music" component={Music} />
                 <Route path="/about" component={About} />
               </Switch>
