@@ -7,6 +7,7 @@ import {
 import './App.css';
 import Home from './Home';
 import Work from './Work';
+  import LumaTax from './portfolio/LumaTax';
 import Photography from './Photography';
 import Culture from './Culture';
 import Music from './Music';
@@ -42,6 +43,7 @@ class App extends Component {
                 <Route exact path="/" component={Home} />
                 <Route path="/Photography" component={Photography} />
                 <Route path="/Work" component={Work} />
+                  <Route path="/LumaTax" component={LumaTax} />
                 <Route path="/Culture" component={Culture} />
                 <Route path="/Music" component={Music} />
                 <Route path="/about" component={About} />

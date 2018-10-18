@@ -6,7 +6,7 @@ const Culture = () => {
         <div className="page">
             <section>
                 <h1>Culture</h1>
-                <h3>Critically reflecting the world we live in</h3>
+                <h3>Critically reflecting the world we live in... with hot, easy to digest YouTube playlists</h3>
             </section>
         </div>   
     )

@@ -1,9 +1,15 @@
 import React from 'react';
+import {
+    NavLink,
+  } from "react-router-dom";
 
-const ProjectCard = () => {
+const ProjectCard = (props) => {
+   
     return(
         <li className="grid-box">
-            <h1>Project</h1>
+           <span>
+               <NavLink to={'/' + props.label} activeClassName="active">{props.title}</NavLink>
+            </span>
         </li>
     )
 }

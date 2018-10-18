@@ -1,7 +1,11 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+/* background: #2326FB; */
+  color: #1C120D;
+  /* color: white; */
+  
 }
 .App {
   position: relative;
@@ -17,13 +21,13 @@ body {
   display: flex;
   justify-content:center;
   flex-wrap: wrap;
-  background-color: #222;
+  background-color: #2326FB;
+  z-index: 100;
 }
 .nav a {
   flex-basis: auto;
+  flex-grow:1;
   text-align: center;
-  margin: 0 15px;
-  padding: 10px;
   transition: all 0.3s linear;
   text-decoration: none;
   color: white;
@@ -35,54 +39,51 @@ body {
 section {
   padding: 50px 30px;
   max-width: 640px;
+  margin: 0 auto;
 }
 .page {
   position: absolute;
-  top: 100px;
+  top: 80px;
   left: 0;
   right: 0;
 }
 
-/* simple - enter transition 300ms, exit 150ms */
-/* .fade-appear,
-.fade-enter {
-    opacity: 0;
-    z-index: 1;
-}
-.fade-appear-active,
-.fade-enter.fade-enter-active {
-    opacity: 1;
-    transition: opacity 300ms linear 150ms;
-}
-
-.fade-exit {
-    opacity: 1;
-}
-
-.fade-exit.fade-exit-active {
-    opacity: 0;
-    transition: opacity 150ms linear;
-} */
-/* ----------------------------*/
 ul.grid{
 display: flex;
 flex-wrap: wrap;
 margin: 0;
 padding:0;
 }
+
 li.grid-box{
-  background: blue;
+  background: #2326FB;
+  border: 1px solid white;
   color: white;
   text-align: center;
-  width: 30%;
   margin: 0 10px 10px 0;
   list-style: none;
+}
+
+li.grid-box a{
+  display: block;
+  padding-top:40px;
+  color: white;
+  text-decoration: none;
+}
+
+.projects > li.grid-box{
+  background: #EE9EA5;
+  width: 100%;
   height: 100px;
 }
-li.grid-box h1{
-margin: 37px auto 0;
 
+.playlists > li.grid-box{
+  background: #EE9EA5;
+  width: 23%;
+  height: 75px;
 }
+
+
 
 /* advanced - enter transition 800ms, exit 150ms */
 .fade-appear,
@@ -106,14 +107,18 @@ margin: 37px auto 0;
 .fade-enter.fade-enter-active {
   opacity: 1;
   transform: translateY(0);
-  transition: opacity 300ms linear 150ms, transform 300ms ease-out 150ms;
+  transition: opacity 330ms linear 250ms, transform 330ms ease-out 250ms;
 }
+
+
 .fade-appear-active p,
 .fade-enter.fade-enter-active p {
   transform: translateY(0);
   opacity: 1;
-  transition: opacity 300ms linear 150ms, transform 300ms ease-out 150ms;
+  transition: opacity 330ms linear 150ms, transform 330ms ease-out 150ms;
 }
+
+
 .fade-appear-active li,
 .fade-enter.fade-enter-active li {
   transform: translateY(0);
@@ -121,7 +126,6 @@ margin: 37px auto 0;
   transition: opacity 400ms linear 400ms, transform 400ms ease-out 400ms;
   transition-delay: 300ms;
 }
-
 .fade-appear-active li:nth-of-type(2),
 .fade-enter.fade-enter-active li:nth-of-type(2) {
   transition-delay: 400ms;
@@ -142,13 +146,11 @@ margin: 37px auto 0;
   transition-delay: 700ms;
   transition: opacity 700ms linear 700ms, transform 700ms ease-out 700ms;
 }
-.fade-appear-active li:nth-of-type(5),
-.fade-enter.fade-enter-active li:nth-of-type(5) {
+.fade-appear-active li:nth-of-type(6),
+.fade-enter.fade-enter-active li:nth-of-type(6) {
   transition-delay: 800ms;
   transition: opacity 800ms linear 800ms, transform 800ms ease-out 800ms;
 }
-
-
 
 .fade-exit {
     opacity: 1;
@@ -158,5 +160,93 @@ margin: 37px auto 0;
 .fade-exit.fade-exit-active {
     opacity: 0;
     transform: translateY(-10px);
-    transition: opacity 150ms linear, transform 150ms ease-in;
+    transition: opacity 250ms linear, transform 350ms ease-in;
 }
+
+
+/* simple - enter transition 300ms, exit 150ms */
+/* .fade-appear,
+.fade-enter {
+    opacity: 0;
+    z-index: 1;
+}
+.fade-appear-active,
+.fade-enter.fade-enter-active {
+    opacity: 1;
+    transition: opacity 300ms linear 150ms;
+}
+
+.fade-exit {
+    opacity: 1;
+}
+
+.fade-exit.fade-exit-active {
+    opacity: 0;
+    transition: opacity 150ms linear;
+} */
+/* ----------------------------*/
+
+
+
+/* portfolio.css */
+
+.portfolio-image{
+  width: 100%;
+  height: 350px;
+  background: lightblue;
+}
+
+.p-title-context{
+  font-weight: 700;
+  font-size: .875rem;
+  color: grey;
+  letter-spacing: 0em;
+  padding-top: 6em;
+  padding-bottom: 1em;
+  padding-left: 0em;
+  text-transform: uppercase;
+}
+.p-title-sub{
+  color: #2326FB;
+  font-weight: 700;
+  font-size: 1em;
+  letter-spacing: 0em;
+  padding-left: 0em;
+  padding-top: 6em;
+  padding-bottom: 1em;
+  text-transform: uppercase;
+}
+.p-title{
+  line-height: 1.25;
+  font-size: 2.25rem
+}
+p{
+  font-size:1.2rem;
+  font-weight: 400;
+  line-height: 1.5em;
+}
+.caps{
+  text-transform: uppercase;
+  letter-spacing: .05em;
+}
+.b{
+  font-weight:500;
+}
+h1 { font-size: 3rem; }
+h2 { font-size: 2.25rem; }
+h3 { font-size: 1.5rem; }
+h4 { font-size: 1.25rem; }
+h5 { font-size: 1rem; }
+h6 { font-size: .875rem; }
+
+ .f-6,
+ .f-headline {
+   font-size: 6rem;
+ }
+ .f-5,
+ .f-subheadline {
+   font-size: 5rem;
+ }
+.lh-solid { line-height: 1; }
+.lh-title { line-height: 1.25; }
+.lh-copy  { line-height: 1.5; }
