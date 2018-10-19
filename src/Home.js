@@ -1,8 +1,6 @@
 import React from 'react';
 
-class Home extends Component {
-
-  render() {
+const Home = () => {
     return(
         <div className="page">
             <section>
@@ -16,6 +14,6 @@ class Home extends Component {
             </section>
         </div>   
     )
-  }
 }
+
 export default Home;

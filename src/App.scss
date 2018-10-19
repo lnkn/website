@@ -135,6 +135,7 @@ h6 {
         min-height: 200px;
         margin-bottom: 2rem;
         margin-right: 2rem;
+        justify-content: space-between;
 
         div {
           display: flex;
@@ -148,7 +149,7 @@ h6 {
           flex-flow: column;
           padding: 4rem;
           align-items: center;
-          justify-content: center;
+          justify-content: space-between;
           text-align: center;
           text-decoration: none;
           color: white;
@@ -279,6 +280,10 @@ h6 {
 
 
 // portfolio piece styles
+.goback {
+  font-size: 2rem;
+  cursor: pointer;
+}
 
 .portfolio-image {
   width: 100%;
