@@ -6,6 +6,14 @@ const LumaTax = () => {
         <div className="page">
             <section>
                 <Container>
+                <a
+                    onClick={e => {
+                        e.preventDefault();
+                        this.props.history.goBack();
+                    }}
+                >
+                    ←
+                </a>
                 <Row>
                     <Col sm={4}>
                     <h1 className="f1">LumaTax</h1>

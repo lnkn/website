@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Row, Col } from 'react-grid-system';
+// import { Container, Row, Col } from 'react-grid-system';
 import ProfilePicture from './assets/lincolndoyle-80.jpg'
 
 const About = () => {
@@ -10,6 +10,7 @@ const About = () => {
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias laboriosam maiores autem nemo consectetur sed perspiciatis minus quibusdam dolorem ratione sapiente amet quia quis voluptates, earum culpa odio.</p>
                 <img
                 className="profilepicture"
+                alt="Lincoln Doyle"
                 src={ProfilePicture}
                 />
             </section>

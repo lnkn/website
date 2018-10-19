@@ -2,10 +2,9 @@ import React from 'react';
 import ProjectCard from './ProjectCard'
 const Work = () => {
     return(
-        <div className="page">
+        <div className="page work">
             <section>
-                <h1>Work</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias laboriosam maiores autem nemo consectetur sed perspiciatis minus quibusdam dolorem ratione sapiente amet quia quis voluptates, earum culpa odio.</p>
+                <h1>Projects</h1>
                 <ul className="grid projects">
                     <ProjectCard label="LumaTax" title="LumaTax"/>
                     <ProjectCard label="ThroneFantasy" title="Throne Fantasy"/>

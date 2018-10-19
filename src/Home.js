@@ -1,7 +1,8 @@
 import React from 'react';
-import logo from './assets/logo.svg';
 
-const Home = () => {
+class Home extends Component {
+
+  render() {
     return(
         <div className="page">
             <section>
@@ -15,6 +16,6 @@ const Home = () => {
             </section>
         </div>   
     )
+  }
 }
-
 export default Home;
