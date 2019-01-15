@@ -6,10 +6,10 @@ import {
 const ProjectCard = (props) => {
    
     return(
-        <li>
-            <div>
-                <NavLink to={'/' + props.label} activeClassName="active">{props.title}</NavLink>
-            </div>
+        <li className="link__sexy">
+            <NavLink to={'/' + props.label} activeClassName="active">
+                <div>{props.title}</div>
+            </NavLink>
         </li>
     )
 }

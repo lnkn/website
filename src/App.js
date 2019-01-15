@@ -1,21 +1,29 @@
 import React, { Component } from 'react';
 import {
   Route,
-  NavLink,
   Switch
 } from "react-router-dom";
+
 import './App.scss';
+import './Nav.scss';
+import './Footer.scss'
+
 import Home from './Home';
 import Work from './Work';
-  import LumaTax from './portfolio/LumaTax';
-import Photography from './Photography';
+import LumaTax from './portfolio/LumaTax';
+import Photography from './Photo';
 import Culture from './Culture';
-import Music from './Music';
+import Music from './Radio';
 import About from './About';
+import Nav from './Nav';
+import Terms from './Terms';
+
 import {
   CSSTransition,
   TransitionGroup,
 } from 'react-transition-group';
+
+
 
 // class component
 class App extends Component {
@@ -23,34 +31,28 @@ class App extends Component {
   render() {
 
     return (
-      <div className="App">
-        <div className="nav">
-          <NavLink exact to="/" activeClassName="active">Home</NavLink>
-          <NavLink to="/Work" activeClassName="active">Work</NavLink>
-          <NavLink to="/Photography" activeClassName="active">Photography</NavLink>
-          <NavLink to="/Culture" activeClassName="active">Culture</NavLink>
-          <NavLink to="/Music" activeClassName="active">Music</NavLink>
-          <NavLink to="/about" activeClassName="active">About</NavLink>
-        </div>
+      <div className="app">
+        <Nav/>
         <Route render={({location}) => (
-          <TransitionGroup>
-            <CSSTransition
-              key={location.key}
-              timeout={1800}
-              classNames="fade"
-            >
-              <Switch location={location}>
-                <Route exact path="/" component={Home} />
-                <Route path="/Photography" component={Photography} />
-                <Route path="/Work" component={Work} />
-                  <Route path="/LumaTax" component={LumaTax} />
-                <Route path="/Culture" component={Culture} />
-                <Route path="/Music" component={Music} />
-                <Route path="/about" component={About} />
-              </Switch>
-            </CSSTransition>
-          </TransitionGroup>
-        )} />
+              <TransitionGroup>
+                <CSSTransition
+                  key={location.key}
+                  timeout={1800}
+                  classNames="fade"
+                >
+                  <Switch location={location}>
+                    <Route exact path="/" component={Home} />
+                    <Route path="/photo" component={Photography} />
+                    <Route path="/work" component={Work} />
+                    <Route path="/lumatax" component={LumaTax} />
+                    <Route path="/culture" component={Culture} />
+                    <Route path="/radio" component={Music} />
+                    <Route path="/about" component={About}/>
+                    <Route path="/terms-and-conditions" component={Terms} />
+                  </Switch>
+                </CSSTransition>
+              </TransitionGroup>
+            )} />
       </div>
     );
   }

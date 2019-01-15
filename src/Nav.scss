@@ -1,0 +1,79 @@
+// nav styles ------------------------------------
+.nav {
+    padding: 30px 1rem;
+    background-color: white;
+    z-index: 100;
+    font-family: GT-Sectra;
+    display: flex;
+    transition: all 300ms;
+    margin: 0 auto;
+    max-width:1300px;
+  }
+  
+  .nav__logo{
+    flex: 0 0 auto;
+    margin-right: auto;
+    margin-top: -2px;
+    a{
+      color: #222222;
+      &:visited,&:active{
+        color: #222222;
+      }
+      &:hover{
+        color:#2326fb;
+      }
+      svg{
+        fill: currentColor;
+      }
+    }
+  }
+  .nav__logo-middle{
+    // margin: 0 auto;
+    display: none;
+  }
+  
+  .nav__links{
+    flex: 0 0 auto;
+    margin-right: 0;
+    transition: all 300ms;
+    a {
+      position: relative;
+      display:inline-block;
+      transition: all 100ms;
+      text-decoration: none;
+      color: #222222;
+      margin-left:28px;
+      &:hover{
+        color: #2326fb;
+      }
+      &:after {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: -5px;
+        height: 1px;
+        background: #222;
+        -webkit-transform: scaleX(0);
+        transform: scaleX(0);
+        -webkit-transform-origin: left center;
+        transform-origin: left center;
+        transition: -webkit-transform .5s cubic-bezier(.5,.05,.2,1);
+        transition: transform .5s cubic-bezier(.5,.05,.2,1);
+        transition: transform .5s cubic-bezier(.5,.05,.2,1),-webkit-transform .5s cubic-bezier(.5,.05,.2,1)
+      }
+      &:hover:after {
+        -webkit-transform: scaleX(1);
+        transform: scaleX(1)
+      }
+      &.active {
+        color: #2326fb;
+      }
+      &.active:after {
+        -webkit-transform: scaleX(1);
+        transform: scaleX(1);
+        background: #2326fb;
+      }
+    }
+  }
+
