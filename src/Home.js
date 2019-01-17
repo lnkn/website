@@ -18,8 +18,8 @@ const Home = () => {
                         </div>
                     </a>
                     <div className="content_item">
-                        <div className="subtitle">Game - Throne Fantasy</div>
-                        <div className="title">Fantasy Deathsport</div>
+                        <div className="subtitle">Game for iOS &amp; Android - Throne Fantasy</div>
+                        <div className="title">Game of Thrones</div>
                         <div className="button">Read More</div>
                     </div>
                 </div>
